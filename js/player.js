@@ -35,9 +35,7 @@ class Player {
         playerInfoRef.on("value", (data) => {
             allPlayers = data.val();
         })
-        if(index === player.index){
-            text(allPlayers[plr].name , x-25,y+25);
-             }
+            
        
     }
   
