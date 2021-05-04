@@ -33,7 +33,6 @@ player1.addImage("player1",player_img);
 player2 = createSprite(800,500);
 player2.addImage("player2", player_img);
 players=[player1,player2];
-
 }
 
 play(){
@@ -57,10 +56,11 @@ players[index -1].x = x;
 players[index - 1].y = y;
                        
 if(index === player.index){ 
-fill("black");
+fill("red");
 textSize(25);
-text(allPlayers[plr].name ,x-25,y+25); 
-} textSize(25); fill("white"); 
+// players.toLowerCase();
+text(allPlayers[plr].name ,x-20,y+25); 
+} textSize(25); fill("yellow "); 
 text("Player 1 :" +allPlayers.player1.score,50,50);
 text("Player 2 :" + allPlayers.player2.score, 50, 100);
 
@@ -104,18 +104,7 @@ if (fruitGroup.get(i).isTouching(players)) {
 fruitGroup.get(i).destroy();
 
 
-}
-
-}
-}
-
-
-
-
-
-
-
-}
+}}}}
 
 end(){
 console.log("Game Ended");

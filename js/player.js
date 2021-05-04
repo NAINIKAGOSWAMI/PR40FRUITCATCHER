@@ -34,8 +34,9 @@ class Player {
         var playerInfoRef = database.ref('players');
         playerInfoRef.on("value", (data) => {
             allPlayers = data.val();
+            // Text("player 1 :" +allPlayers.score,50,50);
         })
-            
+             
        
     }
   
