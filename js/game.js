@@ -80,7 +80,7 @@ player.update();
 
 if (frameCount % 20 === 0) {
 fruits = createSprite(random(100, 1000), 0, 100, 100);
-fruits.velocityY = 6;
+fruits.velocityY = 4;
 var rand = Math.round(random(1,5));
 switch(rand){
 case 1: fruits.addImage("fruit1",fruit1_img);
@@ -102,6 +102,8 @@ if (player.index !== null) {
 for (var i = 0; i < fruitGroup.length; i++) {
 if (fruitGroup.get(i).isTouching(players)) {
 fruitGroup.get(i).destroy();
+player.score = player.score+1;
+player.update();
 
 
 }}}}
